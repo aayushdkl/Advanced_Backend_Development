@@ -38,3 +38,5 @@ console.log(typeof typeof x == "string")
 console.log(typeof typeof x === "string")
 //Doing the triple equal to here is of no use as it is always going to result in the same thing.
 //The typeof typeof x is always going to give the result as "string" so it is unnecessary to use the double equal to in this case.
+
+
