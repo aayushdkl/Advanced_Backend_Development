@@ -13,3 +13,7 @@ console.log(1 < 2 < 3) // (1<2)-->true then true<3 i.e 1<3 --> true
 
 console.log(3 > 2 > 1) //(3>2)--> true  then true>1 i.e 1>1 -->false
 //So the answer is false
+
+//Explicit Conversion
+console.log(Boolean(" "))
+console.log(String(123))
