@@ -15,3 +15,13 @@ gun()
 console.log(teacher)
 
 //Everytime we see a formal declaration, we think about the scope in parsing phase only.
+
+function fun() {
+  var i = 5
+  while (i < 10) {
+    var x = i
+    i++
+  }
+  console.log(x)
+}
+fun()
