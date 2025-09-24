@@ -11,3 +11,9 @@ console.log(y) //ReferenceError: y is not defined
 //The var statement declares a function-scoped or globally-scoped variable, optionally initializing it to a value.
 //The let statement declares a block-scoped local variable, optionally initializing it to a value.
 //The const statement declares a block-scoped, read-only named constant.
+
+// var x = 9
+let x = 10
+let x = 11
+
+//Redeclaration is not allowed with let , but its allowed with var

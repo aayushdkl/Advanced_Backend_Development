@@ -1,6 +1,7 @@
 function fun() {
   for (var i = 0; i < 10; i++) {
     // console.log(i);
+    //do something
   }
   console.log(i)
 }
