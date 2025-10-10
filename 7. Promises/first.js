@@ -28,3 +28,19 @@ x = fetch("http://www.xyz.com") //Lets say that this function downloads somethin
 // We dont know how much time it is gonna take
 
 //If we assume that the fetch is written using promises then it will immediately return a promise object which will act as a placeholder
+// x will act as a placeholder for the result
+//Till the time the whole content is not downlaoded, the x acts as a placeholder
+//In these promise object we can attach the functionality we want to execute once the feature task is done
+//Once the future task is done, the promises will automatically execute the attached function
+
+setTimeout(exec, 2000) //callback example
+//Isnt this the same thing as call back,yes it is
+// The inversion of control problem wil be solved by promises,that is the difference
+
+//fetch using callback:
+fetch("http://www.xyz.com", function exec() {
+  console.log("done")
+}) //Example of callback
+//The difference is we have to attach the exec function immediately in the function itself
+//In promises we do x= ...
+//So we can use that after we recive, we donot have to write the feature then and there only we can use it further in the future unlike callbacks
