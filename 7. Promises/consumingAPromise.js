@@ -31,12 +31,13 @@ console.log("Starting...")
 const p = createPromiseWithTimeout()
 console.log("We are now waiting for the promise to be completed")
 console.log("Currently the promise object is ", p)
-
+//p.then(fulfillmentHandler, rejectionHandler)
 p.then(
   function fulfillHandler(value) {
     console.log("inside fulfill handler with value", value)
+    console.log("Promise after fulfillment is", p)
   },
   function rejectionHandler(value) {
-    console.log("inside the rejection handler with value", value)
+    console.log("Promise after rejection is", p)
   }
 )
