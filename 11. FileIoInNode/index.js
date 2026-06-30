@@ -43,11 +43,23 @@
 // // const data = await readFile(pathToFile) // Adding this line, doesnt work again
 // // console.log(data.toString()) //__dirname is only availabe for commonjs module
 
-import { readFile } from "fs/promises"
+import { readFile, writeFile } from "fs/promises"
 console.log(import.meta.url)
 console.log(process.cwd() + "/index.html") //way1
 
 const pathToFile = new URL("./index.html", import.meta.url) //way2
-const data = await readFile(pathToFile)
+const data = await readFile(pathToFile, "utf8")
 console.log(data.toString())
- 
+
+const obj = {
+  name: "Aayush",
+  message: "How is it going",
+}
+
+let template = data
+
+for (const [key, value] of Object.entries(obj)) {
+  template = template.replaceAll(`{{${key}}}`, value)
+}
+const outputFile = new URL("./output.html", import.meta.url)
+await writeFile(outputFile, template)
