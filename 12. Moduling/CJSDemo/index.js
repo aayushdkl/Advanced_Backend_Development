@@ -1,0 +1,10 @@
+const { linearSearch, binarySearch } = require("./searching")
+const { quickSort, bubbleSort, insertionSort } = require("./someAlgorithms")
+
+console.log(linearSearch([1, 2, 3, 4, 5, 6, 7, 7, 9], 5))
+console.log(quickSort([21, 23, 12, 1, 2, 4, 6, 63, 26, 76, 345]))
+console.log(bubbleSort([21, 23, 12, 1, 2, 4, 6, 63, 26, 76, 345]))
+console.log(insertionSort([21, 23, 12, 1, 2, 4, 6, 63, 26, 76, 345]))
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 7, 9], 5))
+// const searchFunctions = require("./searching")
+// console.log(searchFunctions.linearSearch([32, 54, 645, 756], 32))
